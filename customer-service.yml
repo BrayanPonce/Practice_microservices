@@ -1,3 +1,3 @@
 server:
-    port:  ${PORT:8861}
+  port:  ${PORT:8861}
 message:  Configuracion del Customer en el servidor levantadp;
