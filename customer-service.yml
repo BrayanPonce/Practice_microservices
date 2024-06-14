@@ -1,16 +1,17 @@
 server:
-  port:  ${PORT:8861}
+  port:  9090
 message:  Configuracion del Customer en el servidor levantado;
+
 spring:
   datasource:
-    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url:  jdbc:postgresql://localhost:5432/customer
+    username:  postgres
     password:  123456789
-    url:  jdbc:mysql://localhost:3306/crudcloud?serverTimezone=UTC
-    username: root
+    driver-class-name:  org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto:  update
-      database-platform:  org.hibernate.dialect.MySQLDialect
-    cloud:
-      config:
-        url: http://localhost:8860
+      ddl-auto: update
+    show-sql:  true
+    properties:
+      hibernate:
+        dialect:  org.hibernate.dialect.PostgreSQLDialect
