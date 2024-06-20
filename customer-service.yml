@@ -15,3 +15,10 @@ spring:
     properties:
       hibernate:
         dialect:  org.hibernate.dialect.PostgreSQLDialect
+eureka:
+  client:
+    register-with-eureka:  true
+    #fetch-registry:  false
+    serviceurl:
+      defaultZone: http://localhost:8850/eureka/
+message: Configuracion de Customer en el servidor levantado!
